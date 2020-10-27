@@ -1,0 +1,39 @@
+/*START HEADING
+----------------------------------------*/
+#header-search {
+  background-color: rgb(210, 250, 230);
+  padding: 20px 0 20px 0;
+}
+.btn-search {
+  background-color: rgb(124, 235, 180);
+  color: rgb(0, 0, 0);
+}
+
+/* PAGE CONTENT
+----------------------------------------*/
+.page-content {
+  padding-top: 45px;
+  padding-bottom: 190px;
+}
+
+/* READMORE SECTION
+----------------------------------------*/
+.readmore {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background-color: #f7f7f7;
+  /* display: block; */
+}
+.readmore-wrap {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.js-footer-text {
+  padding-top: 10px;
+  font-size: 17px;
+}

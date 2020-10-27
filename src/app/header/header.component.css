@@ -1,0 +1,21 @@
+/* PAGE HEADER 
+-----------------------------------*/
+#header-intro {
+  background-color: rgb(124, 235, 180);
+  padding-top: 120px;
+  padding-bottom: 60px;
+  border-radius: 0;
+}
+#header-intro h1 {
+  font-size: 60px;
+  color: white;
+}
+#header-fact {
+  background-color: rgb(185, 247, 216);
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+#header-search {
+  background-color: rgb(210, 250, 230);
+  padding: 20px 0 20px 0;
+}
