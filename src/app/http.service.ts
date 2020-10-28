@@ -24,4 +24,10 @@ export class HttpService {
     return this.httpClient.get(this.article_endpoint)
   }
 
+  public jsontest(){
+    this.fetchArticle().subscribe(data => {
+      console.log(data)
+    })
+  }
+
 }

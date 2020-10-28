@@ -1,21 +1,29 @@
 <div class="jumbotron" id="header-search">
   <div class="container">
-    <button  type="button" class="btn btn-lg btn-search" id="js-btn-search">
+    <button (click)="extractArticle()" type="button" class="btn btn-lg btn-search" id="js-btn-search">
       Start
     </button>
   </div>
 </div>
-<div class="page-content">
+<div *ngIf="this.article_complete!==false" class="page-content">
   <div class="container" id="js-content">
-    <h1 class="js-wiki-title"></h1>
-    <br />
-    <div class="js-wiki-content"></div>
+    <h1>
+      {{ this.article_title }}
+    </h1>
+    <br>
+    <div>
+      {{ this.article_extract }}
+    </div>
   </div>
 
   <div class="readmore">
     <div class="container readmore-wrap">
-      <div class="js-footer-text"></div>
-      <div class="js-footer-button"></div>
+      <div class="readmore-title">
+        <p>Did you find <b>{{ this.article_title }}</b> interesting?</p>
+      </div>
+      <div class="readmore-button">
+        <a class="btn btn-lg btn-readmore" href="{{this.article_url}}" target="blank">Read more..</a>
+      </div>
     </div>
   </div>
 </div>
