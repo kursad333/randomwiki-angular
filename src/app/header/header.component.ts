@@ -12,9 +12,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(private httpClient: HttpService) { }
 
-  article_count: string;
+  article_count: string = '0'
   public getCount(): void{
-    var article_count;
     this.httpClient.fetchStatistics().subscribe(data => {
       this.article_count = data['query']['statistics']['articles'].toString()
     }) 
