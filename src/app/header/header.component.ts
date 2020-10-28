@@ -11,12 +11,12 @@ export class HeaderComponent implements OnInit {
 
   constructor(private httpClient: HttpService) { }
 
-  page: string;
+  article_count: string;
 
   ngOnInit(): void {
 
-    const a = this.httpClient.fetchArticles().subscribe(data => {
-      this.page = data['query']['statistics']['articles'].toString()
+    this.httpClient.fetchStatistics().subscribe(data => {
+      this.article_count = data['query']['statistics']['articles'].toString()
     }) 
   }
 }
