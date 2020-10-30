@@ -9,6 +9,14 @@
   color: rgb(0, 0, 0);
 }
 
+/* ERROR CONTENT
+----------------------------------------*/
+.page-error{
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
 /* PAGE CONTENT
 ----------------------------------------*/
 .page-content {

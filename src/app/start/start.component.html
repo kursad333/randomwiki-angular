@@ -10,30 +10,39 @@
     </button>
   </div>
 </div>
-<div *ngIf="this.article_complete !== false" class="page-content">
-  <div class="container" id="js-content">
-    <h1>
-      {{ this.article_title }}
-    </h1>
-    <br>
-    <div [innerHTML]=" this.article_extract "></div>
-  </div>
 
-  <div class="readmore">
-    <div class="container readmore-wrap">
-      <div class="readmore-title">
-        <p>
-          Did you find <b>{{ this.article_title }}</b> interesting?
-        </p>
+<div [ngSwitch]="article_complete">
+  <div *ngSwitchCase="true" class="page-content">
+    <div class="container">
+      <h1>
+        {{ this.article_title }}
+      </h1>
+      <br>
+      <div [innerHTML]=" this.article_extract "></div>
+    </div>
+  
+    <div class="readmore">
+      <div class="container readmore-wrap">
+        <div class="readmore-title">
+          <p>
+            Did you find <b>{{ this.article_title }}</b> interesting?
+          </p>
+        </div>
+        <div class="readmore-button">
+          <a
+            class="btn btn-lg btn-readmore"
+            href="{{ this.article_url }}"
+            target="blank">
+            Read more..
+          </a>
+        </div>
       </div>
-      <div class="readmore-button">
-        <a
-          class="btn btn-lg btn-readmore"
-          href="{{ this.article_url }}"
-          target="blank">
-          Read more..
-        </a>
-      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="false" class="page-error">
+    <div class="container">
+      <img src="../../assets/error.svg" class="mx-auto d-block" height="80" width="80">
+      <h4>Something went wrong, <br> please try again later.</h4>
     </div>
   </div>
 </div>

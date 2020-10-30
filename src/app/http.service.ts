@@ -17,11 +17,13 @@ export class HttpService {
     return this.httpClient.get(this.statistics_endpoint);
   }
 
+
   // API endpoint to request a random wikipedia article.
   private article_endpoint = 'https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&grnnamespace=0&prop=extracts|info&exintro&inprop=url&origin=*&formatversion=2&exintro';
 
   // Function to request the random article. This returns an observable with json inside
   public fetchArticle() {
-    return this.httpClient.get(this.article_endpoint);
+    return this.httpClient.get(this.article_endpoint, {observe: 'response'});
   }
+
 }
