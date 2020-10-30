@@ -20,8 +20,11 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+
+
   ngOnInit(): void {
     // Since this is the header we need to update it whenever the site gets refreshed.
     this.getCount();
+    this.httpClient.fetchStatistics()
   }
 }

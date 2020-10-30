@@ -11,7 +11,7 @@
   </div>
 </div>
 
-<div [ngSwitch]="article_complete">
+<div [ngSwitch]="this.article_complete">
   <div *ngSwitchCase="true" class="page-content">
     <div class="container">
       <h1>
@@ -42,7 +42,7 @@
   <div *ngSwitchCase="false" class="page-error">
     <div class="container">
       <img src="../../assets/error.svg" class="mx-auto d-block" height="80" width="80">
-      <h4>Something went wrong, <br> please try again later.</h4>
+      <div [innerHTML]="this.error_msg"></div>
     </div>
   </div>
 </div>
