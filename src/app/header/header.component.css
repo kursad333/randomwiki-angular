@@ -8,14 +8,22 @@
 }
 
 #header-intro h1 {
-  font-size: 60px;
+  font-size: 52px;
   color: white;
+}
+
+#header-intro h3 {
+  font-size: 25px;
 }
 
 #header-fact {
   background-color: rgb(185, 247, 216);
   padding-top: 45px;
   padding-bottom: 45px;
+}
+
+#header-fact h5 {
+  font-size: 18px;
 }
 
 #header-search {

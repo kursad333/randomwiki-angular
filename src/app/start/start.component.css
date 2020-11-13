@@ -1,9 +1,22 @@
-/*START HEADING
+/* FACT SECTION
+----------------------------------------*/
+#header-fact {
+  background-color: rgb(185, 247, 216);
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+h5 {
+  font-size: 19px;
+}
+
+/*START SECTION
 ----------------------------------------*/
 #header-search {
   background-color: rgb(210, 250, 230);
   padding: 20px 0 20px 0;
 }
+
 .btn-search {
   background-color: rgb(124, 235, 180);
   color: rgb(0, 0, 0);
@@ -24,7 +37,7 @@
   padding-bottom: 190px;
 }
 
-/* READMORE SECTION
+/* READMORE FOOTER
 ----------------------------------------*/
 .readmore {
   position: absolute;

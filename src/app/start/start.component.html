@@ -1,3 +1,11 @@
+<div class="jumbotron" id="header-fact">
+  <div class="container">
+    <h5>
+      Random Wiki selects one out of <b>{{ this.article_count }}</b> Wikipedia
+      pages. This number gets bigger every week!
+    </h5>
+  </div>
+</div>
 <div class="jumbotron" id="header-search">
   <div class="container">
     <button
@@ -11,16 +19,16 @@
   </div>
 </div>
 
-<div [ngSwitch]="this.article_complete">
+<div [ngSwitch]="this.query_succesful">
   <div *ngSwitchCase="true" class="page-content">
     <div class="container">
       <h1>
         {{ this.article_title }}
       </h1>
-      <br>
-      <div [innerHTML]=" this.article_extract "></div>
+      <br/>
+      <div [innerHTML]="this.article_extract"></div>
     </div>
-  
+
     <div class="readmore">
       <div class="container readmore-wrap">
         <div class="readmore-title">
@@ -32,16 +40,23 @@
           <a
             class="btn btn-lg btn-readmore"
             href="{{ this.article_url }}"
-            target="blank">
+            target="blank"
+          >
             Read more..
           </a>
         </div>
       </div>
     </div>
   </div>
+
   <div *ngSwitchCase="false" class="page-error">
     <div class="container">
-      <img src="../../assets/error.svg" class="mx-auto d-block" height="80" width="80">
+      <img
+        src="../../assets/error.svg"
+        class="mx-auto d-block"
+        height="80"
+        width="80"
+      />
       <div [innerHTML]="this.error_msg"></div>
     </div>
   </div>
