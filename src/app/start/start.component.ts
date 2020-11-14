@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, enableProdMode, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 
 @Component({

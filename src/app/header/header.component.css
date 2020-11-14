@@ -12,21 +12,6 @@
   color: white;
 }
 
-#header-intro h3 {
+#header-intro h2 {
   font-size: 25px;
-}
-
-#header-fact {
-  background-color: rgb(185, 247, 216);
-  padding-top: 45px;
-  padding-bottom: 45px;
-}
-
-#header-fact h5 {
-  font-size: 18px;
-}
-
-#header-search {
-  background-color: rgb(210, 250, 230);
-  padding: 20px 0 20px 0;
 }
