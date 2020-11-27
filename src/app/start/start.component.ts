@@ -1,10 +1,12 @@
 import { Component, enableProdMode, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
+
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.css']
 })
+
 export class StartComponent implements OnInit {
 
   constructor(private httpClient: HttpService) { }
@@ -47,7 +49,7 @@ export class StartComponent implements OnInit {
   // This function is responsible for displaying the random articles everytime the user clicks on start.
   public extractArticle(): void {
     const article$ = this.httpClient.fetchArticle()
-    this.btn_text = 'Next'
+    // this.btn_text = 'Next'
     article$.subscribe(
       data => {
         try {
@@ -55,6 +57,7 @@ export class StartComponent implements OnInit {
           this.article_extract = data.body['query']['pages'][0]['extract'];
           this.article_url = data.body['query']['pages'][0]['fullurl'];
           this.query_succesful = true;
+          this.btn_text = 'Next'
         }
         catch {
           this.query_succesful = false
