@@ -1,6 +1,5 @@
 import { Component, enableProdMode, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
@@ -9,6 +8,9 @@ import { HttpService } from '../http.service';
 export class StartComponent implements OnInit {
 
   constructor(private httpClient: HttpService) { }
+
+  // Initializing variable for dynamic start button
+  btn_text: string = 'Start'
 
   // Initializing variables used to display all info regarding the articles and statistics
   article_count: string = '0';
@@ -31,7 +33,7 @@ export class StartComponent implements OnInit {
         }
         catch {
           this.query_succesful = false
-          this.error_msg = `<h5>Something went wrong, please try again later.</h5><h6>Status code: empty_statistics</h6>`
+          this.error_msg = `<h5>Something went wrong, please try again later.</h5><h6>Status code: empty_response</h6>`
         }
       },
       err => {
@@ -45,6 +47,7 @@ export class StartComponent implements OnInit {
   // This function is responsible for displaying the random articles everytime the user clicks on start.
   public extractArticle(): void {
     const article$ = this.httpClient.fetchArticle()
+    this.btn_text = 'Next'
     article$.subscribe(
       data => {
         try {
@@ -55,7 +58,7 @@ export class StartComponent implements OnInit {
         }
         catch {
           this.query_succesful = false
-          this.error_msg = `<h5>Something went wrong, please try again later.</h5><h6>Status code: faulty_article</h6>`
+          this.error_msg = `<h5>Something went wrong, please try again later.</h5><h6>Status code: empty_response</h6>`
         }
       },
       err => {
